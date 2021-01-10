@@ -110,7 +110,7 @@ Figure 5 displays the six German traffic sign images that I found on the web:
  <em>Figure 5 - Six traffic signs images found on the internet</em>
 </p>
 
-The first and third image might be difficult to classify because there are similar possibilites such as the 50 and 70 speed limit. Yield is unique but only a few class. The other are chosen at random. 
+Image 2 and Image 4 might be difficult to classify because there are similar possibilites such as the 50 and 70 speed limit. The "Stop" and "Go straight or right" are tough because there are only a few examples of them in our training set. The symbol "Yield" and "Road work" are unique and with decent amount of training examples.
 
 ### 4.2. Discuss the model's predictions on these new traffic signs a
 
@@ -126,13 +126,11 @@ Here are the results of the prediction:
 | Yield     		| Yield				 				|
 
 
-The model correctly guessed five of the six traffic signs, which gives an accuracy of 83%, which compares favorably to the test set accuracy of 91%.
+The model correctly guessed five of the six traffic signs, which gives an accuracy of 83%, which compares favorably to the test set accuracy of 91%. I think Image 4 (Speed limit (30km/h)) is misclassified as a result of the lack of examples in this particular class. 
 
 ### 4.3. Softmax Probability
 
-The code for making predictions on my final model is located in section 3.4. of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five softmax probabilities were. 
+The code for calculating the SOftmax probability is included in section 3.4. of the Ipython notebook. Figure 6 informs the actual image label and the softmax prediction values for the six images I found on the web.
 
 <p align="center">
  <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/softmax_prob.PNG" width="500">
@@ -140,8 +138,7 @@ For the first image, the model is relatively sure that this is a stop sign (prob
  <em>Figure 6 - Softmax probability</em>
 </p>
 
-
-The wrong prediction was due to the small number of examples for this kind of image on the data sample. Adding variations of the images by inverting, rotating, or augmenting them might have increased the accuracy.
+The wrong prediction was due to the small number of examples for this kind of image on the data sample. Adding variations of the images by inverting, rotating, or augmenting them might have increased the model's accuracy.
 
 
 
