@@ -133,3 +133,10 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
+## 5. Conclusion
+
+1 - I would reduce the number of epochs to prevent it from going up and down on the prediction accuracy.
+
+2 - I think the bad prediction of the max speed sign was due the small quantity of examples for this kind of images on the data sample. Adding variations of the images by inverting, rotating or augmenting the them might have increased the accuracy.
+
+
