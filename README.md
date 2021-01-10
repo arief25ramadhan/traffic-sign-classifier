@@ -76,10 +76,11 @@ My final model Validation Accuracy was 0.958
 ### 3.3. Discussing the Model Selection
 
 My final model results were:
-* validation set accuracy of 93.6 % 
+* train set accuracy of 91.9%
+* validation set accuracy of 94.6 % 
 * test set accuracy of 91.%
 
-I choose the Le Net architecture for our traffic sign classifier back bone. 
+I choose the Le Net architecture for our traffic sign classifier back bone. Le Net was developed by Yann Le Cunn. It is the idea  
 
 If a well known architecture was chosen:
 * What architecture was chosen?
