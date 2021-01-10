@@ -1,4 +1,4 @@
-# **Traffic Sign Recognition** 
+# Traffic Sign Recognition
 
 ## 1. Project Definition
 
@@ -11,7 +11,7 @@ This project aims to build a classifier that can recognize different traffic sig
 The pipeline of this project are the following:
 * Load the data set
 * Explore, summarize and visualize the data set
-* Design, train and test a model architecture
+* Design, train, and test the model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
@@ -24,19 +24,19 @@ The pipeline of this project are the following:
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is 34799
+* The size of the training set is 34799
 * The size of the validation set is 4410
-* The size of test set is 12630
+* The size of the test set is 12630
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
 ### 2.2. Data Visualization and Exploration
 
-Here is an exploratory visualization of the data set. 
+After loading the data, we visualize some examples from the set to get a sense of our data. Figure 1 displays the images contained in our dataset.
 
 ![alt text][https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/signs.png]
 
-It is a bar chart showing how the data looks like. 
+We then look at the data's class distribution. Figure 2 is a bar chart showing the frequency of each class. 
 
 ![alt text][https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png]
 
@@ -44,16 +44,15 @@ It is a bar chart showing how the data looks like.
 
 ### 3.1. Image Processing
 
-As a first step, I decided to convert the images to grayscale to minimize memory use for our Neural Network. I think that colors are not crucial for recognizing traffic signs. After that, I normalized the image data to speed up the Neural Network computation.
+Next, we decided to convert the images to grayscale to minimize memory use for our Neural Network. We think that colors are not crucial for recognizing traffic signs. 
 
-Here is an example of a traffic sign image before and after grayscaling.
+After that, we normalized the image data to speed up the Neural Network computation. Figure 3 illustrates an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![Figure 3][image2]
 
+### 3.2. Final Model
 
-#### 3.2. Final Model
-
-My final model consisted of the following layers:
+Our final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -67,9 +66,9 @@ My final model consisted of the following layers:
 |						|												|
 |						|												|
 
-I trained the model using a batch size of 128, for 30 epochs, and a learning rate of 0.001.
+We trained the model using a batch size of 128, 30 epochs, and a learning rate of 0.001.
 
-For my training optimizers I used softmax_cross_entropy_with_logits to get a tensor representing the mean loss value to which I applied tf.reduce_mean to compute the mean of elements across dimensions of the result. Finally I applied minimize to the AdamOptimizer of the previous result.
+For my training optimizers, we used softmax_cross_entropy_with_logits to get a tensor representing the mean loss value, to which we applied tf.reduce_mean to compute the mean of elements across dimensions of the result. Finally, I applied minimize to the AdamOptimizer of the previous result.
 
 My final model Validation Accuracy was 0.958
 
@@ -80,7 +79,7 @@ My final model results were:
 * validation set accuracy of 94.6 % 
 * test set accuracy of 91.%
 
-I choose the Le Net architecture for our traffic sign classifier back bone. Le Net was developed by Yann Le Cunn. It is the idea  
+I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. It is the idea  
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -112,15 +111,13 @@ Here are the results of the prediction:
 | Slippery Road			| Slippery Road      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model correctly guessed five of the six traffic signs, which gives an accuracy of 83%, which compares favorably to the test set accuracy of 91%.
 
-#### 4.3. Softmax Probability
-
-Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+### 4.3. Softmax Probability
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five softmax probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -133,10 +130,8 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 For the second image ... 
 
-## 5. Conclusion
+The wrong prediction was due to the small number of examples for this kind of image on the data sample. Adding variations of the images by inverting, rotating, or augmenting them might have increased the accuracy.
 
-1 - I would reduce the number of epochs to prevent it from going up and down on the prediction accuracy.
 
-2 - I think the bad prediction of the max speed sign was due the small quantity of examples for this kind of images on the data sample. Adding variations of the images by inverting, rotating or augmenting the them might have increased the accuracy.
 
 
