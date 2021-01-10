@@ -70,23 +70,23 @@ The final model consisted of the following layers:
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Convolution 5x5, 6 Filters     	| 1x1 stride, valid_padding, outputs 28x28x6, ReLU activation  |
+| Max pooling	      	| 2x2 stride,  valid padding, outputs 14x14x6 				|
+| Convolution 5x5, 16 filters	    | 1x1 stride, valid_padding, outputs 10x10x16, ReLU activation |
+| Max pooling	      	| 2x2 stride,  valid padding, outputs 5x5x16 				|
+| Flatten      	| output 400 (5x5x16)				|
+| Fullly connected     	| outputs 120, activation ReLU				|
+| Fullly connected     	| outputs 84, activation ReLU				|
+| Fullly connected     	| outputs 43, activation SoftMax				|
 
-We trained the model using a batch size of 128, 30 epochs, and a learning rate of 0.001. I used Adam oprimizer and softmax activation function in the final layer.
+I trained the model using a batch size of 128, 100 epochs, using Adam optimizer and a learning rate of 0.001. 
 
 ### 3.3. Discussing the Model Selection
 
 My final model results were:
 * train set accuracy of 91.9%
-* validation set accuracy of 94.6 % 
-* test set accuracy of 91.%
+* validation set accuracy of 94.3% 
+* test set accuracy of 91.3%
 
 I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. Figure 4 displays the architecture of the Le Net network.
 
@@ -96,6 +96,7 @@ I choose the Le Net architecture for our traffic sign classifier backbone. Yann 
  <em>Figure 4 - Le Net Architecture</em>
 </p>
  
+ Le Net is straightforward and small, making it perfect to understand the basics of CNNs. Le Net is mostly used as a first step for teaching CNN.
 
 ## 4. Test a Model on New Images
 
