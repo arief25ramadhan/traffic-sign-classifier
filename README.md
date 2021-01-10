@@ -79,7 +79,7 @@ The final model consisted of the following layers:
 | Fullly connected     	| outputs 84, activation ReLU				|
 | Fullly connected     	| outputs 43, activation SoftMax				|
 
-I trained the model using a batch size of 128, 100 epochs, using Adam optimizer and a learning rate of 0.001. 
+I trained the model using a batch size of 128, 100 epochs, using Adam optimizer and a learning rate of 0.001. This hyperparameter selection is chosen via trial and error, by building a simplest model first then add upon it to reach the desired performance.
 
 ### 3.3. Discussing the Model Selection
 
@@ -96,7 +96,7 @@ I choose the Le Net architecture for our traffic sign classifier backbone. Yann 
  <em>Figure 4 - Le Net Architecture</em>
 </p>
  
- Le Net is straightforward and small, making it perfect to understand the basics of CNNs. Le Net is mostly used as a first step for teaching CNN.
+Le Net is straightforward and small, making it perfect to understand the basics of CNNs. Le Net is mostly used as a first step for teaching CNN.
 
 ## 4. Test a Model on New Images
 
