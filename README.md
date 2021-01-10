@@ -34,11 +34,21 @@ signs data set:
 
 After loading the data, we visualize some examples from the set to get a sense of our data. Figure 1 displays the images contained in our dataset.
 
-![alt text][https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/signs.png]
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/signs.png" width="500">
+ <br>
+ <em>Figure 1 - Images from the training set</em>
+</p>
+
 
 We then look at the data's class distribution. Figure 2 is a bar chart showing the frequency of each class. 
 
-![alt text][https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png]
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <br>
+ <em>Figure 2 - Training set class distribution</em>
+</p>
+
 
 ## 3. Design and Test a Model Architecture
 
@@ -48,7 +58,11 @@ Next, we decided to convert the images to grayscale to minimize memory use for o
 
 After that, we normalized the image data to speed up the Neural Network computation. Figure 3 illustrates an example of a traffic sign image before and after grayscaling.
 
-![Figure 3][image2]
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <br>
+ <em>Figure 3 - RGB vs. Grayscale</em>
+</p>
 
 ### 3.2. Final Model
 
@@ -79,12 +93,13 @@ My final model results were:
 * validation set accuracy of 94.6 % 
 * test set accuracy of 91.%
 
-I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. It is the idea  
+I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. It is the idea.
 
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <br>
+ <em>Figure 4 - Le Net Architecture</em>
+</p>
  
 
 ## 4. Test a Model on New Images
@@ -93,8 +108,11 @@ If a well known architecture was chosen:
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <br>
+ <em>Figure 5 - Six traffic signs images found on the internet</em>
+</p>
 
 The first image might be difficult to classify because ...
 
