@@ -58,7 +58,7 @@ Next, I converted the images to grayscale to minimize memory use for the Neural 
 After that, I normalized the image data to speed up the Neural Network computation. Figure 3 illustrates an example of a traffic sign image before and after grayscaling.
 
 <p align="center">
- <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/rgb_gray.PNG" width="500">
  <br>
  <em>Figure 3 - RGB vs. Grayscale</em>
 </p>
@@ -91,7 +91,7 @@ My final model results were:
 I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. Figure 4 displays the architecture of the Le Net network.
 
 <p align="center">
- <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/LeNet_Original_Image.jpg" width="500">
  <br>
  <em>Figure 4 - Le Net Architecture</em>
 </p>
@@ -104,7 +104,7 @@ I choose the Le Net architecture for our traffic sign classifier backbone. Yann 
 Figure 5 displays the six German traffic sign images that I found on the web:
 
 <p align="center">
- <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/six_images.png" width="500">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/six_images.PNG" width="500">
  <br>
  <em>Figure 5 - Six traffic signs images found on the internet</em>
 </p>
@@ -134,7 +134,7 @@ The code for making predictions on my final model is located in section 3.4. of 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five softmax probabilities were. 
 
 <p align="center">
- <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/softmax_prob.png" width="500">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/softmax_prob.PNG" width="500">
  <br>
  <em>Figure 6 - Softmax probability</em>
 </p>
