@@ -69,7 +69,7 @@ The final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
+| Input         		| 32x32 Grayscale image   							| 
 | Convolution 5x5, 6 Filters     	| 1x1 stride, valid_padding, outputs 28x28x6, ReLU activation  |
 | Max pooling	      	| 2x2 stride,  valid padding, outputs 14x14x6 				|
 | Convolution 5x5, 16 filters	    | 1x1 stride, valid_padding, outputs 10x10x16, ReLU activation |
