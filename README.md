@@ -32,7 +32,7 @@ signs data set:
 
 ### 2.2. Data Visualization and Exploration
 
-After loading the data, we visualize some examples from the set to get a sense of our data. Figure 1 displays the images contained in our dataset.
+After loading the data, I visualize some examples from the set to get a sense of the data. Figure 1 displays the images contained in our dataset.
 
 <p align="center">
  <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/signs.png" width="500">
@@ -40,8 +40,7 @@ After loading the data, we visualize some examples from the set to get a sense o
  <em>Figure 1 - Images from the training set</em>
 </p>
 
-
-We then look at the data's class distribution. Figure 2 is a bar chart showing the frequency of each class. 
+I then look at the data's class distribution. I draw a bar chart showing the frequency of each class as shown by Figure 2.
 
 <p align="center">
  <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
@@ -54,9 +53,9 @@ We then look at the data's class distribution. Figure 2 is a bar chart showing t
 
 ### 3.1. Image Processing
 
-Next, we decided to convert the images to grayscale to minimize memory use for our Neural Network. We think that colors are not crucial for recognizing traffic signs. 
+Next, I converted the images to grayscale to minimize memory use for the Neural Network. I think that colors are not crucial for recognizing traffic signs. 
 
-After that, we normalized the image data to speed up the Neural Network computation. Figure 3 illustrates an example of a traffic sign image before and after grayscaling.
+After that, I normalized the image data to speed up the Neural Network computation. Figure 3 illustrates an example of a traffic sign image before and after grayscaling.
 
 <p align="center">
  <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
@@ -66,7 +65,7 @@ After that, we normalized the image data to speed up the Neural Network computat
 
 ### 3.2. Final Model
 
-Our final model consisted of the following layers:
+The final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -80,11 +79,7 @@ Our final model consisted of the following layers:
 |						|												|
 |						|												|
 
-We trained the model using a batch size of 128, 30 epochs, and a learning rate of 0.001.
-
-For my training optimizers, we used softmax_cross_entropy_with_logits to get a tensor representing the mean loss value, to which we applied tf.reduce_mean to compute the mean of elements across dimensions of the result. Finally, I applied minimize to the AdamOptimizer of the previous result.
-
-My final model Validation Accuracy was 0.958
+We trained the model using a batch size of 128, 30 epochs, and a learning rate of 0.001. I used Adam oprimizer and softmax activation function in the final layer.
 
 ### 3.3. Discussing the Model Selection
 
@@ -93,7 +88,7 @@ My final model results were:
 * validation set accuracy of 94.6 % 
 * test set accuracy of 91.%
 
-I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. It is the idea.
+I choose the Le Net architecture for our traffic sign classifier backbone. Yann Le Cunn developed le Net. Figure 4 displays the architecture of the Le Net network.
 
 <p align="center">
  <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
@@ -106,15 +101,15 @@ I choose the Le Net architecture for our traffic sign classifier backbone. Yann 
 
 ### 4.1. Use images found on the web
 
-Here are five German traffic signs that I found on the web:
+Figure 5 displays the six German traffic sign images that I found on the web:
 
 <p align="center">
- <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/class_occurence.png" width="500">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/six_images.png" width="500">
  <br>
  <em>Figure 5 - Six traffic signs images found on the internet</em>
 </p>
 
-The first image might be difficult to classify because ...
+The first and third image might be difficult to classify because there are similar possibilites such as the 50 and 70 speed limit. Yield is unique but only a few class. The other are chosen at random. 
 
 ### 4.2. Discuss the model's predictions on these new traffic signs a
 
@@ -122,31 +117,28 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Road work      		| Road work   									| 
+| Speed limit (60km/h)   			| Speed limit (60km/h) 									|
+| Stop					| Stop									|
+| Speed limit (30km/h)	      		| Roundabout mandatory				 				|
+| Go straight or right			| Go straight or right    							|
+| Yield     		| Yield				 				|
 
 
 The model correctly guessed five of the six traffic signs, which gives an accuracy of 83%, which compares favorably to the test set accuracy of 91%.
 
 ### 4.3. Softmax Probability
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
+The code for making predictions on my final model is located in section 3.4. of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five softmax probabilities were
+For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five softmax probabilities were. 
 
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+<p align="center">
+ <img src="https://github.com/arief25ramadhan/traffic-sign-classifier/blob/main/report_images/softmax_prob.png" width="500">
+ <br>
+ <em>Figure 6 - Softmax probability</em>
+</p>
 
-
-For the second image ... 
 
 The wrong prediction was due to the small number of examples for this kind of image on the data sample. Adding variations of the images by inverting, rotating, or augmenting them might have increased the accuracy.
 
